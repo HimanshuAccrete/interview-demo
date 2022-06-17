@@ -1,0 +1,50 @@
+[
+    {
+        "id": "1",
+        "name": "Himanshu Makwana",
+        "email": "hm896292@gmail.com",
+        "gender": "male",
+        "address": "Gandhinagar",
+        "dob": "11/18/2000"
+    },
+    {
+        "id": "2",
+        "name": "Pratibha Makwana",
+        "email": "pratibha@gmail.com",
+        "gender": "female",
+        "address": "Amreli",
+        "dob": "12/18/1973"
+    },
+    {
+        "id": "6",
+        "name": "Prayati Mundhad",
+        "email": "prayati@gmail.com",
+        "gender": "female",
+        "address": "Pune",
+        "dob": "10/28/1999"
+    },
+    {
+        "id": "3",
+        "name": "Sagar Makwana",
+        "email": "Sagar@gmail.com",
+        "gender": "male",
+        "address": "Rajkot",
+        "dob": "4/24/1998"
+    },
+    {
+        "id": "4",
+        "name": "Pravin Makwana",
+        "email": "pravin@gmail.com",
+        "gender": "male",
+        "address": "Amreli",
+        "dob": "5/23/1970"
+    },
+    {
+        "id": "5",
+        "name": "Dhaval Parmar",
+        "email": "dhaval@gmail.com",
+        "gender": "male",
+        "address": "Gandhinagar",
+        "dob": "11/1/1995"
+    }
+]
