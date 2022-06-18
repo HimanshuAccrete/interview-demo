@@ -13,7 +13,10 @@ import {
   TextField,
 } from "@mui/material";
 import Close from "@mui/icons-material/Close";
-import Datepicker from "react-datepicker";
+import ReactDatepicker from "react-datepicker";
+import DateAdapter from "@mui/lab/AdapterDateFns";
+import DatePicker from "@mui/lab/DatePicker";
+import LocalizationProvider from "@mui/lab/LocalizationProvider";
 
 export default function EditModal(props) {
   const { open, handleClose, row } = props;
@@ -123,21 +126,46 @@ export default function EditModal(props) {
           </FormControl>
 
           <FormControl fullWidth sx={{ mb: 6 }}>
+            {/* // using react-datepicker
             <FormLabel id="dob">Date of Birth</FormLabel>
-            <Datepicker
+            <ReactDatepicker
               required
               selected={new Date(userData.dob)}
               onChange={(date) => {
                 var dd = date.getDate();
                 var MM = date.getMonth() + 1;
                 var yyyy = date.getFullYear();
-                setUserData((pre) => ({ ...pre, dob: `${MM}/${dd}/${yyyy}` }));
+                setUserData((pre) => ({
+                  ...pre,
+                  dob: `${MM}/${dd}/${yyyy}`,
+                }));
               }}
               dateFormat="MM/dd/yyyy"
               id="dob"
               placeholderText="Select a date"
               customInput={<TextField />}
-            />
+            /> */}
+
+            <LocalizationProvider dateAdapter={DateAdapter}>
+              <DatePicker
+                inputFormat="MM/dd/yyyy"
+                label="Date of Birth"
+                value={new Date(userData.dob)}
+                onChange={(date) => {
+                  var dd = date.getDate();
+                  var MM = date.getMonth() + 1;
+                  var yyyy = date.getFullYear();
+                  setUserData((pre) => ({
+                    ...pre,
+                    dob: `${MM}/${dd}/${yyyy}`,
+                  }));
+                }}
+                renderInput={(params) => (
+                  <TextField {...params} />
+                )}
+                inputProps={{ style: { fontSize: 13, marginTop: "5px" } }}
+              />
+            </LocalizationProvider>
           </FormControl>
 
           <Box sx={{ display: "flex", alignItems: "center" }}>
